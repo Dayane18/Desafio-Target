@@ -1,4 +1,5 @@
 <?php
+
 $num = 13; // número que será verificado na sequência de Fibonacci
 
 $a = 0;
@@ -16,6 +17,7 @@ if($c == $num){
 } else {
     echo $num . " não pertence à sequência de Fibonacci";
 }
+
 ?>
 
 
