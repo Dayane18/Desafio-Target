@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script language="JavaScript" type="text/javascript">
+
+        const faturamentoMensal = {
+            "01": 1200,
+            "02": 1500,
+            "03": 1800,
+            "04": 2000,
+            "05": 1900,
+            "06": 2200,
+            "07": 2500,
+            "08": 2300,
+            "09": 2100,
+            "10": 1900,
+            "11": 1800,
+            "12": 1500,
+            "13": 1200,
+            "14": 1400,
+            "15": 1600,
+            "16": 1800,
+            "17": 2000,
+            "18": 1900,
+            "19": 2200,
+            "20": 2400,
+            "21": 2600,
+            "22": 2300,
+            "23": 2100,
+            "24": 2000,
+            "25": 1900,
+            "26": 1700,
+            "27": 1500,
+            "28": 1400,
+            "29": 1300,
+            "30": 1200,
+            "31": 1100
+        };
+
+        // calcula o menor valor de faturamento
+        let menorValor = Infinity;
+        for (let dia in faturamentoMensal) {
+            if (faturamentoMensal[dia] < menorValor) {
+                menorValor = faturamentoMensal[dia];
+            }
+        }
+        console.log("Menor valor de faturamento: " + menorValor);
+
+        // calcula o maior valor de faturamento
+        let maiorValor = -Infinity;
+        for (let dia in faturamentoMensal) {
+            if (faturamentoMensal[dia] > maiorValor) {
+                maiorValor = faturamentoMensal[dia];
+            }
+        }
+        console.log("Maior valor de faturamento: " + maiorValor);
+
+        // calcula a média mensal de faturamento
+        let totalFaturamento = 0;
+        let numDiasFaturamento = 0;
+        for (let dia in faturamentoMensal) {
+            totalFaturamento += faturamentoMensal[dia];
+            numDiasFaturamento++;
+        }
+        let mediaMensal = totalFaturamento / numDiasFaturamento;
+
+        // calcula o número de dias em que o faturamento diário foi superior à média mensal
+        let numDiasAcimaDaMedia = 0;
+        for (let dia in faturamentoMensal) {
+            if (faturamentoMensal[dia] > mediaMensal) {
+                numDiasAcimaDaMedia++;
+            }
+        }
+        console.log("Número de dias acima da média: " + numDiasAcimaDaMedia);
+
+    </script>
+</body>
+
+</html>
